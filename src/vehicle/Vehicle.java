@@ -2,8 +2,6 @@ package vehicle;
 
 import java.util.Date;
 
-
-
 public abstract class Vehicle {
 	
 	int x;
@@ -11,6 +9,7 @@ public abstract class Vehicle {
 	int price;
 	int speed;
 	Date date;
+
 	
 	public Vehicle(int x, int y, int price, int speed, Date date){
 		super();
@@ -20,11 +19,6 @@ public abstract class Vehicle {
 		this.price = price;
 		this.date = date;
 	}
-	
-	
-	
-	
-	
 	
 	abstract int getX();
 	abstract void setX(int x);
