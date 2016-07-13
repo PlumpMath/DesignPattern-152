@@ -14,7 +14,9 @@ public class DelegateExample2 {
             programmer.programming = new JavaProgramming();
         }else if(programmerType.equalsIgnoreCase("C# programmer")){
             programmer.programming = new CSharpProgramming();
-        }
+        }else if(programmerType.equalsIgnoreCase("Python programmer")){
+            programmer.programming = new PythonProgramming();
+         }
         programmer.makeCode();
     }
 }
@@ -34,6 +36,11 @@ class JavaProgramming implements Programming{
 class CSharpProgramming implements Programming{
     public void makeCode(){
         System.out.println(".NET, Microsoft");
+    }
+}
+class PythonProgramming implements Programming{
+    public void makeCode(){
+        System.out.println("Python");
     }
 }
 
