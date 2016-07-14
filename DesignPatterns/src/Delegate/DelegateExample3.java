@@ -50,6 +50,13 @@ abstract class Duck{
     public void swim(){
         System.out.println("all ducks can swim");
     }
+    public void setFlyBehavior(FlyBehavior fb){
+        flyBehavior = fb;
+    }
+    public void setQuackBehavior(QuackBehavior qb){
+        quackBehavior = qb;
+    }
+
 }
 
 
