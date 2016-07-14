@@ -6,6 +6,12 @@ public class DelegateExample3 {
         duck.performQuack();
         duck.performfly();
         duck.display();
+
+        Duck duck1 = new ModelDuck();
+        duck.performfly();
+        duck.setFlyBehavior(new FlyRocketPowered());
+        duck.performfly();
+
     }
 }
 
@@ -23,6 +29,12 @@ class FlyNoWay implements FlyBehavior{
         System.out.println("I can not fly(((");
     }
 }
+class FlyRocketPowered implements FlyBehavior{
+    public void fly() {
+        System.out.println("ROCKET FLY");
+    }
+}
+
 interface QuackBehavior{
     void quack();
 }
