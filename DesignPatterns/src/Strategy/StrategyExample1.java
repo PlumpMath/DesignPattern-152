@@ -1,6 +1,6 @@
-package Delegate;
+package Strategy;
 
-public class DelegateExample3 {
+public class StrategyExample1 {
     public static void main(String[] args) {
         Duck duck = new MallarDuck();
         duck.performQuack();
