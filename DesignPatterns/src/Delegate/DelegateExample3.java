@@ -8,10 +8,13 @@ public class DelegateExample3 {
         duck.display();
 
         Duck duck1 = new ModelDuck();
-        duck.performfly();
-        duck.setFlyBehavior(new FlyRocketPowered());
-        duck.performfly();
+        duck1.performfly();
+        duck1.setFlyBehavior(new FlyRocketPowered());
+        duck1.performfly();
 
+        DuckSignal notADuck = new DuckSignal();
+        notADuck.display();
+        notADuck.performQuack();
     }
 }
 
@@ -47,6 +50,7 @@ class QuackMute implements QuackBehavior{
 class Squack implements QuackBehavior{
     public void quack() {System.out.println("SQUACK");}
 }
+
 
 abstract class Duck{
     FlyBehavior flyBehavior;
@@ -88,6 +92,20 @@ class ModelDuck extends Duck{
     public void display(){
         System.out.println("I'm model duck");
     }
+}
+class DuckSignal{
+    QuackBehavior quackBehavior;
+    public DuckSignal(){
+        quackBehavior = new Quack();
+    }
+    public void display(){
+        System.out.println("I'm a man who hunt on ducks");
+    }
+
+    public void performQuack(){
+        quackBehavior.quack();
+    }
+
 }
 
 
