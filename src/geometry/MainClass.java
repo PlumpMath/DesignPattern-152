@@ -108,7 +108,9 @@ public class MainClass {
 		}
 		System.out.println(count);
 	}
-
+	/**
+	 * The same as isColor method, add object which implements Colorable interface to new ArrayList colorGeo
+	 */
 	public static void aColor(ArrayList<Geometry> geo) {
 		ArrayList<Colorable> colorGeo = new ArrayList<>();
 		int count=0;
@@ -119,7 +121,7 @@ public class MainClass {
 			}
 		}
 		for (Colorable c: colorGeo) {
-			System.out.println(c.toString());
+			System.out.println(c.getColor());
 		}
 		System.out.println(count);
 	}
