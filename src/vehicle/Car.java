@@ -2,7 +2,7 @@ package vehicle;
 
 import java.util.Date;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle implements Driveable{
 	
 	
 	public Car(int x , int y ,int price, int speed, Date date){
@@ -35,6 +35,10 @@ public class Car extends Vehicle{
 	public String toString() {
 		return "Car [" + super.toString();
 	}
-	
 
+
+	@Override
+	public void Drive() {
+		System.out.println("Car move");
+	}
 }

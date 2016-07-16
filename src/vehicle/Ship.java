@@ -2,7 +2,7 @@ package vehicle;
 
 import java.util.Date;
 
-public class Ship extends Vehicle{
+public class Ship extends Vehicle implements Swimable{
 	
 	
 	private int port;
@@ -41,4 +41,8 @@ public class Ship extends Vehicle{
 				+ ", " + super.toString();
 	}
 
+	@Override
+	public void swim() {
+		System.out.println("Ship swim");
+	}
 }

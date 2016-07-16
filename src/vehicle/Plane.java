@@ -2,7 +2,7 @@ package vehicle;
 
 import java.util.Date;
 
-public class Plane extends Vehicle{
+public class Plane extends Vehicle implements Flyable{
 	
 	private int heigth;
 	private int passangers;
@@ -40,7 +40,10 @@ public class Plane extends Vehicle{
 		return "Plane [heigth=" + heigth + ", passangers=" + passangers
 				+ ", " + super.toString();
 	}
-	
-	
-	
+
+
+	@Override
+	public void fly() {
+		System.out.println("Plane fly");
+	}
 }
