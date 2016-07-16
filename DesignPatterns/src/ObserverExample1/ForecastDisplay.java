@@ -1,13 +1,14 @@
 package ObserverExample1;
 
-public class ForecastDisplay implements Observer, DisplayElement {
+import java.util.*;
+
+public class ForecastDisplay implements java.util.Observer, DisplayElement {
+
     private float currentPressure = 29.92f;
     private float lastPressure;
-    private WeatherData weatherData;
 
-    public ForecastDisplay(WeatherData weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+    public ForecastDisplay(Observable observable) {
+        observable.addObserver(this);
     }
 
     public void display() {
@@ -21,11 +22,14 @@ public class ForecastDisplay implements Observer, DisplayElement {
         }
     }
 
-    public void update(float temp, float humidity, float pressure) {
-        lastPressure = currentPressure;
-        currentPressure = pressure;
-
-        display();
+    @Override
+    public void update(Observable o, Object arg) {
+        if (o instanceof WeatherData){
+            WeatherData weatherData = (WeatherData) o;
+            lastPressure = currentPressure;
+            currentPressure = weatherData.getPressure();
+            display();
+        }
 
     }
 }

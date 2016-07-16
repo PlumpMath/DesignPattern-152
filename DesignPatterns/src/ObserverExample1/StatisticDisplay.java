@@ -1,15 +1,16 @@
 package ObserverExample1;
 
-public class StatisticDisplay implements Observer, DisplayElement {
+import java.util.*;
+
+public class StatisticDisplay implements java.util.Observer, DisplayElement {
+
     private float maxTemp = 0.0f;
     private float minTemp = 200;
     private float tempSum = 0.0f;
     private int numReadings;
-    private WeatherData weatherData;
 
-    public StatisticDisplay(WeatherData weatherData) {
-        this.weatherData = weatherData;
-        weatherData.registerObserver(this);
+    public StatisticDisplay(Observable observable) {
+        observable.addObserver(this);
     }
 
     public void display() {
@@ -17,17 +18,23 @@ public class StatisticDisplay implements Observer, DisplayElement {
                 + "/" + maxTemp + "/" + minTemp);
 
     }
-    public void update(float temp, float humidity, float pressure) {
-        tempSum += temp;
-        numReadings++;
 
-        if(temp > maxTemp){
-            maxTemp = temp;
-        }
-        if (temp < minTemp){
-            minTemp = temp;
-        }
+    public void update(Observable observable, Object arg) {
+        if (observable instanceof WeatherData) {
+            WeatherData weatherData = (WeatherData)observable;
+            float temp = weatherData.getTemperature();
+            tempSum += temp;
+            numReadings++;
 
-        display();
+            if (temp > maxTemp) {
+                maxTemp = temp;
+            }
+
+            if (temp < minTemp) {
+                minTemp = temp;
+            }
+
+            display();
+        }
     }
 }
