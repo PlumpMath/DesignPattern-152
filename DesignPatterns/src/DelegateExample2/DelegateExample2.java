@@ -1,4 +1,4 @@
-package Delegate;
+package DelegateExample2;
 
 import java.util.Scanner;
 
@@ -18,38 +18,6 @@ public class DelegateExample2 {
             programmer.programming = new PythonProgramming();
          }
         programmer.makeCode();
-    }
-}
-
-
-
-interface Programming{
-    void makeCode();
-}
-
-class JavaProgramming implements Programming{
-    public void makeCode(){
-        System.out.println("JavaVirtualMachine, Oracle");
-    }
-}
-
-class CSharpProgramming implements Programming{
-    public void makeCode(){
-        System.out.println(".NET, Microsoft");
-    }
-}
-class PythonProgramming implements Programming{
-    public void makeCode(){
-        System.out.println("Python");
-    }
-}
-
-
-class Programmer {
-    Programming programming;
-
-    void makeCode(){
-        programming.makeCode();
     }
 }
 
