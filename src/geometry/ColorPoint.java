@@ -1,6 +1,6 @@
 package geometry;
 
-public class ColorPoint extends Point{
+public class ColorPoint extends Point implements Colorable{
 	
 	private String color;
 	
@@ -27,7 +27,7 @@ public class ColorPoint extends Point{
 	}
 
 	public String toString() {
-		return super.toString()+" [color=" + color + "]";
+		return "Color"+super.toString()+" [color=" + color + "]";
 	}
 	
 	

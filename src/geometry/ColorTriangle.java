@@ -1,6 +1,6 @@
 package geometry;
 
-public class ColorTriangle extends Triangle{
+public class ColorTriangle extends Triangle implements Colorable{
 	
 	private String color;
 	
@@ -25,7 +25,7 @@ public class ColorTriangle extends Triangle{
 	}
 
 	public String toString() {
-		return "ColorTriangle [" + super.toString() +" color=" + color +"]";
+		return "Color" + super.toString() +" color=" + color +"]";
 	}
 	
 	

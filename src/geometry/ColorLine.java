@@ -1,6 +1,6 @@
 package geometry;
 //comment
-public class ColorLine extends Line{
+public class ColorLine extends Line implements Colorable{
 	
 	private String color;
 	
