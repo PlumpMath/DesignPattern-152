@@ -12,12 +12,14 @@ public class StrategyExample2 {
         StrategySorting client = new StrategySorting();
         client.setStrategy(new BubbleSort());
         client.performSort(arr1);
+
         int[] arr2 = new int[10];
         for (int i = 0; i < arr2.length; i++) {
             arr2[i] = new Random().nextInt(100);
         }
         client.setStrategy(new InsertingSort());
         client.performSort(arr2);
+
         int[] arr3 = new int[10];
         for (int i = 0; i < arr3.length; i++) {
             arr3[i] = new Random().nextInt(100);
@@ -45,7 +47,7 @@ class BubbleSort implements Sorting{
      public void sort(int[] arr) {
          System.out.println("Bubble sort");
          System.out.println("Before:\t"+Arrays.toString(arr));
-         for (int i = 0; i < arr.length-1; i++) {
+         for (int i = 0; i < arr.length; i++) {
              for (int j = 0; j < arr.length - i - 1; j++) {
                  if (arr[j]>arr[j+1]){
                      int tmp = arr[j];
