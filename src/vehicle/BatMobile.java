@@ -1,11 +1,9 @@
 package vehicle;
 
-import java.util.Date;
-
 public class BatMobile extends Vehicle implements Driveable,Swimable,Flyable {
 
-    public BatMobile(int x , int y ,int price, int speed, Date date){
-        super(x,y,price,speed,date);
+    public BatMobile(int x , int y ,int price, int speed, int yearOfMade){
+        super(x,y,price,speed,yearOfMade);
 
     }
 

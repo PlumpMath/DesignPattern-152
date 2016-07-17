@@ -1,14 +1,12 @@
 package vehicle;
 
-import java.util.Date;
-
 public class Plane extends Vehicle implements Flyable{
 	
 	private int heigth;
 	private int passangers;
 	
-	public Plane(int x, int y, int price, int speed, Date date,int heigth, int passangers){
-		super(x,y,price,speed,date);
+	public Plane(int x, int y, int price, int speed, int yearOfMade,int heigth, int passangers){
+		super(x,y,price,speed,yearOfMade);
 		this.heigth = heigth;
 		this.passangers = passangers;
 	}

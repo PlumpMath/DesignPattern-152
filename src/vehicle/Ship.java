@@ -8,7 +8,7 @@ public class Ship extends Vehicle implements Swimable{
 	private int port;
 	private int passangers;
 	
-	public Ship(int x, int y, int price, int speed, Date date, int port, int passangers){
+	public Ship(int x, int y, int price, int speed, int date, int port, int passangers){
 		super(x, y, price, speed, date);
 		this.port = port;
 		this.passangers = passangers;

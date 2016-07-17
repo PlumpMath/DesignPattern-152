@@ -1,12 +1,10 @@
 package vehicle;
 
-import java.util.Date;
-
 public class AmphibianCar extends Vehicle implements Swimable, Driveable {
 
 
-    public AmphibianCar(int x, int y, int price, int speed, Date date) {
-        super(x, y, price, speed, date);
+    public AmphibianCar(int x, int y, int price, int speed, int yearOfMade) {
+        super(x, y, price, speed, yearOfMade);
     }
 
     @Override

@@ -1,13 +1,11 @@
 package vehicle;
 
-import java.util.Date;
-
 public class Car extends Vehicle implements Driveable{
 	
 	
-	public Car(int x , int y ,int price, int speed, Date date){
+	public Car(int x , int y ,int price, int speed, int yearOfMade){
 		
-		super(x, y, price, speed, date);
+		super(x, y, price, speed, yearOfMade);
 	
 	}
 

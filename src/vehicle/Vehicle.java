@@ -1,23 +1,21 @@
 package vehicle;
 
-import java.util.Date;
-
 public abstract class Vehicle {
 	
 	int x;
 	int y;
 	int price;
 	int speed;
-	Date date;
+	int yearOfMade;
 
 	
-	public Vehicle(int x, int y, int price, int speed, Date date){
+	public Vehicle(int x, int y, int price, int speed, int yearOfMade){
 		super();
 		this.x = x ;
 		this.y = y;
 		this.speed = speed;
 		this.price = price;
-		this.date = date;
+		this.yearOfMade = yearOfMade;
 	}
 	
 	abstract int getX();
@@ -27,7 +25,7 @@ public abstract class Vehicle {
 	@Override
 	public String toString() {
 		return "x=" + x + ", y=" + y + ", price=" + price + ", speed="
-				+ speed + ", date=" + date + "]";
+				+ speed + ", year of made=" + yearOfMade + "]";
 	} 
 	
 
