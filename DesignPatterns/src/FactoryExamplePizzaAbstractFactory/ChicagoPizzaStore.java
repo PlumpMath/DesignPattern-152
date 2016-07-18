@@ -22,8 +22,5 @@ public class ChicagoPizzaStore extends PizzaStore {
             pizza.setName("Chicago Style Pepperoni Pizza");
         }
         return pizza;
-
-
     }
-
 }
