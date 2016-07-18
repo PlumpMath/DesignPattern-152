@@ -1,23 +1,13 @@
 package FactoryExamplePizzaSimpleFactory;
 
 public class ClamPizza extends Pizza {
-    @Override
-    public void prepare() {
 
-    }
 
-    @Override
-    public void bake() {
-
-    }
-
-    @Override
-    public void cut() {
-
-    }
-
-    @Override
-    public void box() {
-
+    public ClamPizza() {
+        name = "Clam Pizza";
+        dough = "Thin crust";
+        sauce = "White garlic sauce";
+        toppings.add("Clams");
+        toppings.add("Grated parmesan cheese");
     }
 }
