@@ -7,7 +7,7 @@ public class NYPizzaStore extends PizzaStore{
     @Override
     protected Pizza createPizza(String item) {
         Pizza pizza = null;
-        PizzaIngridientFactory ingridientFactory = new NYIngridientFactory();
+        PizzaIngredientFactory ingridientFactory = new NYPizzaIngredientFactory();
 
 
 

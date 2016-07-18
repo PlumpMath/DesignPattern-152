@@ -1,27 +1,26 @@
 package FactoryExamplePizzaAbstractFactory;
 
-public class NYIngridientFactory implements PizzaIngridientFactory {
-
+public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory {
 
     @Override
     public Dough createDough() {
-        return new ThinCrustDough();
+        return new ThickCrustDough();
     }
 
     @Override
     public Sauce createSauce() {
-        return new MarinaraSauce();
+        return new PlumTomatoSauce();
     }
 
     @Override
     public Cheese createCheese() {
-        return new ReggianoCheese();
+        return new MozzarellaCheese();
     }
 
     @Override
     public Veggies[] createVeggies() {
-        Veggies [] veggies = {new Garlic(), new Orion(), new Mushroom(), new RedPepper()};
-        return veggies;
+        Veggies [] veggies = {new BlackOlives(), new Spinach(), new Eggplant()}
+        return new Veggies[0];
     }
 
     @Override
@@ -31,6 +30,6 @@ public class NYIngridientFactory implements PizzaIngridientFactory {
 
     @Override
     public Clams createClam() {
-        return new FreshClam();
+        return new FrozenClams();
     }
 }
