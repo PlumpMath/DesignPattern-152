@@ -1,23 +1,15 @@
 package FactoryExamplePizzaSimpleFactory;
 
 public class VeggiePizza extends Pizza {
-    @Override
-    public void prepare() {
-
-    }
-
-    @Override
-    public void bake() {
-
-    }
-
-    @Override
-    public void cut() {
-
-    }
-
-    @Override
-    public void box() {
-
+    public VeggiePizza() {
+        name = "Veggie Pizza";
+        dough = "Crust";
+        sauce = "Marinara sauce";
+        toppings.add("Shredded mozzarella");
+        toppings.add("Grated parmesan");
+        toppings.add("Diced onion");
+        toppings.add("Sliced mushrooms");
+        toppings.add("Sliced red pepper");
+        toppings.add("Sliced black olives");
     }
 }
