@@ -1,4 +1,7 @@
 package FactoryExampleComputerDeviceAbstractFactory;
 
-public class DeviceFactory {
+public interface DeviceFactory {
+    Mouse createMouse();
+    Keyboard createKeyboard();
+    Touchpad createTouchpad();
 }
