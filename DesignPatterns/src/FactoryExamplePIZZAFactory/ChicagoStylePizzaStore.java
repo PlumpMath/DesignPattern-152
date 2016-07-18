@@ -1,6 +1,6 @@
 package FactoryExamplePIZZAFactory;
 
-public class ChicagoPizzaStore extends PizzaStore {
+public class ChicagoStylePizzaStore extends PizzaStore {
 
 
     @Override
