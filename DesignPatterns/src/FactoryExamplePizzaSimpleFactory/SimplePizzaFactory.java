@@ -1,4 +1,4 @@
-package FactoryExamplePizzaFactory;
+package FactoryExamplePizzaSimpleFactory;
 
 public class SimplePizzaFactory {
 
