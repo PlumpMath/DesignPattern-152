@@ -5,13 +5,14 @@ public class SimplePizzaFactory {
     public Pizza createPizza(String type){
         Pizza pizza = null;
 
-        if(type.equals("cheese")){
-            pizza = new CheezePizza();
-        }else if(type.equals("pepperoni")){
+        if(type.equalsIgnoreCase("cheese")){
+            pizza = new CheesePizza();
+        }else if(type.equalsIgnoreCase("pepperoni")){
             pizza = new PepperoniPizza();
-        }else if(type.equals("clam")){
+        }else if(type.equalsIgnoreCase("clam")){
             pizza = new ClamPizza();
-        }else if(type.equals("Veggi")){
+        }else if(type.equalsIgnoreCase("Veggie")){
+            pizza = new VeggiePizza();
         }
         return pizza;
     }
