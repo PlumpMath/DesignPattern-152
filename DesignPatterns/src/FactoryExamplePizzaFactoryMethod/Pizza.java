@@ -1,4 +1,4 @@
-package FactoryExamplePIZZAFactory;
+package FactoryExamplePizzaFactoryMethod;
 
 import java.util.ArrayList;
 

@@ -1,4 +1,4 @@
-package FactoryExamplePIZZAFactory;
+package FactoryExamplePizzaFactoryMethod;
 
 public class CaliforniaStyleClamPizza extends Pizza {
     public CaliforniaStyleClamPizza() {
