@@ -1,6 +1,9 @@
 package homework.Vehicle;
 
 class FlyRocketPowered implements FlyBehavior{
+
+
+
     public void fly(int h, int s) {
         System.out.println("ROCKET FLY , your current speed and height = ");
         int speed=0;
@@ -9,5 +12,7 @@ class FlyRocketPowered implements FlyBehavior{
             speed = i;
         }
         System.out.println("Height is "+ h+", your current speed is "+ speed);
+
     }
+
 }

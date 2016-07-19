@@ -8,6 +8,7 @@ public abstract class Vehicle {
     int price;
     int speed;
     FlyBehavior flyBehavior;
+    DriveBehavior driveBehavior;
 
 
     public int getSpeed() {
@@ -51,6 +52,8 @@ public abstract class Vehicle {
     }
 
     public abstract void performfly(int height, int speed) ;
+    public abstract void performDrive(int speed) ;
+
     public void setFlyBehavior(FlyBehavior flyBehavior){
         this.flyBehavior = flyBehavior;}
 

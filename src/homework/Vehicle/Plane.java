@@ -14,9 +14,6 @@ public class Plane extends Vehicle{
     }
 
 
-
-
-
     public void setPassengers(int passengers){
 
         this.passengers = passengers;
@@ -44,5 +41,10 @@ public class Plane extends Vehicle{
     @Override
     public void performfly(int heigth , int speed) {
         flyBehavior.fly(heigth,speed);
+    }
+
+    @Override
+    public void performDrive(int speed) {
+        System.out.println("This object can't drive");
     }
 }
