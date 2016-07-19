@@ -6,11 +6,15 @@ public class Plane extends Vehicle{
     FlyBehavior flyBehavior;
 
 
-    public Plane(int x, int y, int price){
+    public Plane(int x, int y, int price, int yearOfMade){
         this.x = x;
         this.y = y;
         this.price = price;
         this.flyBehavior = new FlyRocketPowered();
+        this.swimBehavior = new NONSwim();
+        this.driveBehavior = new NONDrive();
+        this.yearOfMade = yearOfMade;
+
     }
 
 
@@ -43,8 +47,16 @@ public class Plane extends Vehicle{
         flyBehavior.fly(heigth,speed);
     }
 
+
     @Override
     public void performDrive(int speed) {
-        System.out.println("This object can't drive");
+        driveBehavior.drive(speed);
     }
+
+    @Override
+    public void performSwim(int speed, int dive) {
+        swimBehavior.swim(speed,dive);
+    }
+
+
 }

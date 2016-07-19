@@ -7,8 +7,11 @@ public abstract class Vehicle {
     int y;
     int price;
     int speed;
+
+
     FlyBehavior flyBehavior;
     DriveBehavior driveBehavior;
+    SwimBehavior swimBehavior;
 
 
     public int getSpeed() {
@@ -35,9 +38,6 @@ public abstract class Vehicle {
         this.y = y;
     }
 
-    public void setPrice(int price){
-        this.price = price;
-    }
 
     public int getPrice() {
         return this.price;
@@ -47,14 +47,17 @@ public abstract class Vehicle {
         return yearOfMade;
     }
 
-    public void setYearOfMade(int yearOfMade) {
-        this.yearOfMade = yearOfMade;
-    }
-
     public abstract void performfly(int height, int speed) ;
+
     public abstract void performDrive(int speed) ;
 
+    public abstract void performSwim(int speed, int dive);
+
     public void setFlyBehavior(FlyBehavior flyBehavior){
-        this.flyBehavior = flyBehavior;}
+        this.flyBehavior = flyBehavior;
+    }
+    public void setDriveBehavior(DriveBehavior driveBehavior){
+        this.driveBehavior = driveBehavior;
+    }
 
 }

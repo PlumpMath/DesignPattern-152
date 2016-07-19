@@ -1,13 +1,14 @@
 package homework.Vehicle;
 
-public class Car extends Vehicle {
-    public Car(int x, int y, int price, int yearOfMade) {
+public class Ship extends Vehicle {
+
+    public Ship(int x, int y , int price,int yearOfMade) {
         this.x = x;
         this.y = y;
         this.price = price;
-        this.driveBehavior = new DriveFast();
+        this.swimBehavior = new SwimOnSurface();
+        this.driveBehavior = new NONDrive();
         this.flyBehavior = new NONFly();
-        this.swimBehavior = new NONSwim();
         this.yearOfMade = yearOfMade;
     }
 
@@ -18,11 +19,16 @@ public class Car extends Vehicle {
 
     @Override
     public void performDrive(int speed) {
+        System.out.println("This object can not fly");
         driveBehavior.drive(speed);
-
     }
 
-    @Override
+
+    public void performSwim(int speed) {
+        swimBehavior.swim(speed,0);
+    }
+
+
     public void performSwim(int speed, int dive) {
         swimBehavior.swim(speed,dive);
     }
