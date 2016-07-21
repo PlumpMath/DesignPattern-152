@@ -1,5 +1,5 @@
 package AbstractFactoryJDBC;
 
 public interface Statement {
-    public ResultSet executeQuery(String sql);
+    ResultSet executeQuery(String sql);
 }

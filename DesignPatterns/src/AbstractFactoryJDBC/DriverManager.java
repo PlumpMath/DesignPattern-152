@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 
 public class DriverManager {
 
@@ -37,5 +38,9 @@ class Test {
 //                list) {
 //            System.out.println(k);
 //        }
+        ListIterator<Integer> listIter = list.listIterator();
+
+
+
     }
 }
