@@ -3,10 +3,17 @@ package Singleton;
 public class Chocoholic {
     private boolean empty;
     private boolean boiled;
+    private static  Chocoholic uniqueInstance;
 
-    public Chocoholic(){
+    private Chocoholic(){
         empty = true;
         boiled = false;
+    }
+
+    public static Chocoholic getInstance(){
+        if(uniqueInstance == null){
+            uniqueInstance = new Chocoholic();
+        }return uniqueInstance;
     }
 
     public boolean isBoiled() {
