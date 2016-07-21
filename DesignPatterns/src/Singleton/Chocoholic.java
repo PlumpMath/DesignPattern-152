@@ -3,17 +3,23 @@ package Singleton;
 public class Chocoholic {
     private boolean empty;
     private boolean boiled;
-    private static  Chocoholic uniqueInstance;
+    private volatile static  Chocoholic uniqueInstance;
 
     private Chocoholic(){
         empty = true;
         boiled = false;
     }
 
-    public static synchronized Chocoholic getInstance(){
-        if(uniqueInstance == null){
-            uniqueInstance = new Chocoholic();
-        }return uniqueInstance;
+    public static  Chocoholic getInstance(){
+        if(uniqueInstance == null) {
+            synchronized (Singleton.class) {
+                if (uniqueInstance == null) {
+
+                    uniqueInstance = new Chocoholic();
+                }
+            }
+        }
+        return uniqueInstance;
     }
 
     public boolean isBoiled() {
