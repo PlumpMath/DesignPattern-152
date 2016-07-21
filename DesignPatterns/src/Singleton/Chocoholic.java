@@ -10,7 +10,7 @@ public class Chocoholic {
         boiled = false;
     }
 
-    public static Chocoholic getInstance(){
+    public static synchronized Chocoholic getInstance(){
         if(uniqueInstance == null){
             uniqueInstance = new Chocoholic();
         }return uniqueInstance;
