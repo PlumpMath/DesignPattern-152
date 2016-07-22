@@ -1,15 +1,17 @@
 package homework.Vehicle;
 
-public class AmphibianCar extends Vehicle{
+public class Batmobile extends Vehicle{
 
-    public AmphibianCar(int x, int y, int price, int yearOfMade) {
-        this.x = x;
-        this.y = y;
-        this.price = price;
-        this.driveBehavior = new DriveFast();
-        this.flyBehavior = new NONFly();
-        this.swimBehavior = new SwimDive();
-        this.yearOfMade = yearOfMade;
+    public Batmobile(int x, int y, int price, int yearOfMade){
+
+         this.x = x;
+         this.y = y;
+         this.price = price;
+         this.driveBehavior = new DriveFast();
+         this.flyBehavior = new FlyRocketPowered();
+         this.swimBehavior = new SwimDive();
+         this.yearOfMade = yearOfMade;
+
     }
 
 

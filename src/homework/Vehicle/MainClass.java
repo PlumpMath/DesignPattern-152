@@ -5,7 +5,7 @@ public class MainClass {
 
         Vehicle plane = new Plane(1,1,1000,1999);
         ((Plane)plane).setPassengers(500);
-        plane.performfly(10000, 800);
+        plane.performFly(10000, 800);
 
         System.out.println("\n-----------------------\n");
 

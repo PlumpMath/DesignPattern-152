@@ -13,7 +13,7 @@ public class Ship extends Vehicle {
     }
 
     @Override
-    public void performfly(int height, int speed) {
+    public void performFly(int height, int speed) {
         flyBehavior.fly(height,speed);
     }
 

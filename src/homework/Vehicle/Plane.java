@@ -43,7 +43,7 @@ public class Plane extends Vehicle{
     }
 
     @Override
-    public void performfly(int heigth , int speed) {
+    public void performFly(int heigth , int speed) {
         flyBehavior.fly(heigth,speed);
     }
 
