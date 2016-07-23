@@ -1,6 +1,7 @@
 package DecoratorExampleCoffeeShop;
 
 public class Whip extends CondimentDecorator {
+
     Beverage beverage;
 
 

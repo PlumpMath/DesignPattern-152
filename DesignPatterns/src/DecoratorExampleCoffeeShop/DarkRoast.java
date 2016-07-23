@@ -3,7 +3,7 @@ package DecoratorExampleCoffeeShop;
 public class DarkRoast extends Beverage {
 
    public DarkRoast(){
-       description = "Dark Roast "+this.getCoffeeSize().ordinal();
+       description = "Dark Roast ";
    }
 
 

@@ -1,5 +1,8 @@
 package DecoratorExampleCoffeeShop;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 public class TimarioCoffeShop {
 
     public static void main(String[] args) {
@@ -25,6 +28,8 @@ public class TimarioCoffeShop {
 
         System.out.println("Total sum is $"+(beverage.cost()+beverage2.cost()+beverage3.cost()));
 
+        //Decorator
+        BufferedReader reader =new BufferedReader(new InputStreamReader(System.in));
     }
 
 }
