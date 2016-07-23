@@ -1,5 +1,7 @@
 package StrategyExampleDuckBehavior;
 
 class Squack implements QuackBehavior{
-    public void quack() {System.out.println("SQUACK");}
+    public void quack() {
+        System.out.println("SQUACK");
+    }
 }

@@ -1,8 +1,9 @@
 package StrategyExampleDuckBehavior;
 
 class FlyNoWay implements FlyBehavior{
-    public void fly() {
 
+    public void fly() {
         System.out.println("I can not fly(((");
     }
+
 }

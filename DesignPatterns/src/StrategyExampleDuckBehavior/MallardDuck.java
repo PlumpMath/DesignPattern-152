@@ -1,11 +1,12 @@
 package StrategyExampleDuckBehavior;
 
-class MallarDuck extends Duck{
-    public MallarDuck(){
+class MallardDuck extends Duck{
+
+    public MallardDuck(){
         quackBehavior = new Quack();
         flyBehavior = new FlyWithWings();
     }
     public void display(){
-        System.out.println("MallarDuck quack and fly");
+        System.out.println("MallardDuck quack and fly");
     }
 }
