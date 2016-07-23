@@ -9,7 +9,7 @@ class ModelDuck extends Duck{
     }
 
     public void display(){
-        System.out.println("I'm model duck");
+        System.out.println("ModelDuck : NoFly , Quack");
     }
 
 }

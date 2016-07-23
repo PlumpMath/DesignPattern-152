@@ -9,7 +9,7 @@ class SignalDuck extends Duck{
     }
 
     public void display(){
-        System.out.println("I'm a man who hunt on ducksArray");
+        System.out.println("Signal duck : NoFly, Quack");
     }
 
 }
