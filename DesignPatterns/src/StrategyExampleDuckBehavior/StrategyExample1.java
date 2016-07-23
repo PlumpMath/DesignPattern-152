@@ -27,11 +27,22 @@ public class StrategyExample1 {
         list.add(duck2,2);
         list.add(duck3,3);
 
+
+//        TurkeyWild turkeyWild = new TurkeyWild();
+//        TurkeyAdapter turkeyAdapter = new TurkeyAdapter(turkeyWild);
+//        turkeyAdapter.performfly();
+//        turkeyAdapter.performQuack();
+
         System.out.println("\n-------------------------------\n");
         Duck [] donalds = new Duck[10];
         for (int i = 0; i < donalds.length; i++) {
             donalds[i] = Ducks.randomDuck();
             donalds[i].display();
+            donalds[i].performfly();
+//            System.out.println(" ");
+            donalds[i].setFlyBehavior(new FlyRocketPowered());
+            donalds[i].performfly();
+            System.out.println(" ");
         }
 
     }
@@ -43,7 +54,7 @@ public class StrategyExample1 {
 class Ducks{
 
     public static Duck randomDuck(){
-        int i = (int) (Math.random()*4);
+        int i = (int) (Math.random()*5);
         switch (i) {
             case 0 :
                 return new MallardDuck();
@@ -57,6 +68,8 @@ class Ducks{
             case 3 :
                 return new RedHeadDuck();
 //                break;
+            case 4 :
+                return new TurkeyAdapter(new TurkeyWild());
             default:
                 return null;
         }
