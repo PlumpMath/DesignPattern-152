@@ -17,21 +17,29 @@ public class RemoteControlTest {
         GarageDoorOpenCommand garageOpen = new GarageDoorOpenCommand(garageDoor);
         GarageDoorCloseCommand garageClose = new GarageDoorCloseCommand(garageDoor);
 
-        //the light
-        remote.setCommand(0,lightOn, lightOff);
+        //the stereo
+        Stereo stereo = new Stereo("Living room");
+        StereoOnWithCDCommand stereoOn = new StereoOnWithCDCommand(stereo);
+        StereoOffCommand stereoOff = new StereoOffCommand(stereo);
+
+        //the ceiling fan
+        CeilingFan ceilingFan = new CeilingFan("Living room");
+        CeilingFanHighCommand fanOn = new CeilingFanHighCommand(ceilingFan);
+        CeilingFanOffCommand fanOff = new CeilingFanOffCommand(ceilingFan);
+
+
+        Command[] partyOn = { lightOn, stereoOn, garageOpen, fanOn};
+        Command[] partyOff = { lightOff, stereoOff, garageClose, fanOff};
+
+        MacroCommand partyOnMacro = new MacroCommand(partyOn);
+        MacroCommand partyOffMacro = new MacroCommand(partyOff);
+
+        remote.setCommand(0, partyOnMacro, partyOffMacro);
         remote.onButtonWasPushed(0);
         remote.offButtonWasPushed(0);
-        //the garage door
-        remote.setCommand(1,garageOpen,garageClose);
-        remote.onButtonWasPushed(1);
-        remote.offButtonWasPushed(1);
-        remote.undoButtonWasPushed();
-        remote.undoCommand.execute();
 
 
-        System.out.println("-------\n");
-        System.out.println(remote);
-        System.out.println("-------\n");
+        System.out.println("\n ----- \n "+ remote + "----- \n");
 
     }
 }
