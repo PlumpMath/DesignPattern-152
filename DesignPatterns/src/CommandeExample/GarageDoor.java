@@ -8,10 +8,13 @@ public class GarageDoor {
 
 
     public void up(){
+        this.lightOn();
         System.out.println("The door is opening");
     }
     public void down(){
+        this.lightOff();
         System.out.println("The door is closing");
+
     }
     public void stop(){
         System.out.println("The door was stooped");
