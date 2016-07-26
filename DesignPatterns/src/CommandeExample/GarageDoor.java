@@ -5,7 +5,11 @@ package CommandeExample;
  */
 public class GarageDoor {
 
+    String location;
 
+    public GarageDoor(String location) {
+        this.location = location;
+    }
 
     public void up(){
         this.lightOn();
