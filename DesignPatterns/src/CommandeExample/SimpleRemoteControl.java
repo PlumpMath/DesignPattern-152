@@ -1,6 +1,8 @@
 package CommandeExample;
 
 public class SimpleRemoteControl {
+
+
     Command slot;
 
     public SimpleRemoteControl() {
