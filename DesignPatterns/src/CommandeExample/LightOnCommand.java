@@ -3,6 +3,7 @@ package CommandeExample;
 public class LightOnCommand implements Command {
 
     Light light;
+    int level;
 
     public LightOnCommand(Light light) {
         this.light = light;
@@ -10,11 +11,12 @@ public class LightOnCommand implements Command {
 
     @Override
     public void execute() {
+        level = light.getLevel();
         light.on();
     }
 
     @Override
     public void undo() {
-        light.off();
+        light.dim(level);
     }
 }

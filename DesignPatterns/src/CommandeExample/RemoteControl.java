@@ -34,7 +34,7 @@ public class RemoteControl {
         undoCommand = onCommands[slot];
     }
     public void offButtonWasPushed(int slot){
-        onCommands[slot].execute();
+        offCommands[slot].execute();
         undoCommand = offCommands[slot];
     }
 
@@ -49,8 +49,8 @@ public class RemoteControl {
         for (int i = 0; i < onCommands.length; i++) {
             stringBuffer.append("[slot "+i+ "] " + onCommands[i].getClass().getName()
                         + "   " + offCommands[i].getClass().getName() + "\n");
-
         }
+        stringBuffer.append("[undo] " + undoCommand.getClass().getName() + "\n");
         return stringBuffer.toString();
     }
 }
