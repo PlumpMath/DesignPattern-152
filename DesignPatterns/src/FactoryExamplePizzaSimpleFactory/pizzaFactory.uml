@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="-228.0" y="-5.0">FactoryExamplePizzaSimpleFactory.CheesePizza</node>
+    <node x="-219.0" y="30.0">FactoryExamplePizzaSimpleFactory.PepperoniPizza</node>
+    <node x="-87.0" y="-3.0">FactoryExamplePizzaSimpleFactory.VeggiePizza</node>
+    <node x="-93.0" y="35.0">FactoryExamplePizzaSimpleFactory.ClamPizza</node>
+    <node x="196.0" y="-124.0">FactoryExamplePizzaSimpleFactory.PizzaStore</node>
+    <node x="-146.0" y="-125.0">FactoryExamplePizzaSimpleFactory.Pizza</node>
+    <node x="3.0" y="-122.0">FactoryExamplePizzaSimpleFactory.SimplePizzaFactory</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="FactoryExamplePizzaSimpleFactory.ClamPizza" target="FactoryExamplePizzaSimpleFactory.Pizza">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="FactoryExamplePizzaSimpleFactory.SimplePizzaFactory" target="FactoryExamplePizzaSimpleFactory.VeggiePizza">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="FactoryExamplePizzaSimpleFactory.SimplePizzaFactory" target="FactoryExamplePizzaSimpleFactory.ClamPizza">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="FactoryExamplePizzaSimpleFactory.CheesePizza" target="FactoryExamplePizzaSimpleFactory.Pizza">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="FactoryExamplePizzaSimpleFactory.SimplePizzaFactory" target="FactoryExamplePizzaSimpleFactory.CheesePizza">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="FactoryExamplePizzaSimpleFactory.SimplePizzaFactory" target="FactoryExamplePizzaSimpleFactory.PepperoniPizza">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="FactoryExamplePizzaSimpleFactory.PepperoniPizza" target="FactoryExamplePizzaSimpleFactory.Pizza">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="FactoryExamplePizzaSimpleFactory.VeggiePizza" target="FactoryExamplePizzaSimpleFactory.Pizza">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="FactoryExamplePizzaSimpleFactory.PizzaStore" target="FactoryExamplePizzaSimpleFactory.SimplePizzaFactory">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="-80.0" />
+  <SelectedNodes>
+    <node>FactoryExamplePizzaSimpleFactory.PizzaStore</node>
+  </SelectedNodes>
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
