@@ -1,15 +1,20 @@
 package TemplateMethodExample;
 
-/**
- * Created by Тимур on 28.07.2016.
- */
-public abstract class Bevarage {
+
+
+public abstract class Beverage {
 
     final void prepareRecipe(){
         boilWater();
         brew();
         pourInCup();
-        addCondiments();
+        if(customerWantsCondiments())
+            addCondiments();
+    }
+
+
+    public boolean customerWantsCondiments() {
+        return true;
     }
 
     abstract void brew();
