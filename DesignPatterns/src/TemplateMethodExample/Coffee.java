@@ -1,31 +1,15 @@
 package TemplateMethodExample;
 
 
-public class Coffee {
+public class Coffee extends Bevarage{
 
-    void prepareRecipe(){
-        boilWater();
-        brewCoffeeGrinds();
-        pourInCup();
-        addSugarAndMilk();
-    }
-
-    private void addSugarAndMilk() {
+    public void addCondiments() {
         System.out.println("Adding sugar and milk");
     }
 
-    private void pourInCup() {
-        System.out.println("Pouring into the cup");
-    }
-
-    private void brewCoffeeGrinds() {
+    public void brew() {
         System.out.println("Dripping coffee through filter");
     }
-
-    private void boilWater() {
-        System.out.println("Boiling the water");
-    }
-
 
 }
 

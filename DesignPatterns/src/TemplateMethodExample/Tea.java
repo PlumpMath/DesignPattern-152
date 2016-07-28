@@ -1,30 +1,15 @@
 package TemplateMethodExample;
 
-/**
- * Created by Тимур on 28.07.2016.
- */
-public class Tea {
 
-    public void prepareRecipe(){
-        boilWater();
-        steepTeaBag();
-        pourInCup();
-        addLemon();
-    }
 
-    private void boilWater() {
-        System.out.println("Boiling the water");
-    }
+public class Tea extends Bevarage{
 
-    private void steepTeaBag() {
+
+    public void brew() {
         System.out.println("Steeping the tea");
     }
 
-    private void pourInCup() {
-        System.out.println("Pouring into a cup");
-    }
-
-    private void addLemon() {
+    public void addCondiments() {
         System.out.println("Adding a lemon");
     }
 }
