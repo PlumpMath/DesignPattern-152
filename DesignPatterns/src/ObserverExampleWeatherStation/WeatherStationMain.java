@@ -3,8 +3,8 @@ package ObserverExampleWeatherStation;
 public class WeatherStationMain {
     public static void main(String[] args) {
         WeatherData weatherData = new WeatherData();
-        CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
 
+        CurrentConditionsDisplay currentDisplay = new CurrentConditionsDisplay(weatherData);
         StatisticDisplay statisticDisplay = new StatisticDisplay(weatherData);
         ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
 
