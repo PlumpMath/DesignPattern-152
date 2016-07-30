@@ -1,4 +1,4 @@
-package GeneralQuiz;
+package QUIZ.GeneralQuiz;
 
 
 public class PrintTest {
