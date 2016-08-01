@@ -2,12 +2,12 @@ package IteratorExample;
 
 
 public class MenuItem {
-    private int price;
+    private double price;
     private String name;
     private String description;
     private boolean isVegeterian;
 
-    public MenuItem(int price, String name, String description, boolean isVegeterian) {
+    public MenuItem(double price, String name, String description, boolean isVegeterian) {
         this.price = price;
         this.name = name;
         this.description = description;
@@ -15,11 +15,11 @@ public class MenuItem {
     }
 
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
     }
 
