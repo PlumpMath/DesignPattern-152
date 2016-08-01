@@ -4,6 +4,8 @@ package IteratorExample;
 import java.util.ArrayList;
 
 public class PancakeHouseMenu {
+
+
     ArrayList menuItems;
 
     public PancakeHouseMenu() {
@@ -22,9 +24,18 @@ public class PancakeHouseMenu {
         menuItems.add(menuItem);
     }
 
-    public ArrayList getMenuItems() {
-        return menuItems;
+//    public ArrayList getMenuItems() {
+//        return menuItems;
+//    }
+    public Iterator createIterator(){
+        return new PancakeHouseIterator(menuItems);
     }
+
+    public String toString(){
+        return "ObjectVille Pancake House Menu";
+    }
+
+
     /**
      * другие методы
      *
