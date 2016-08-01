@@ -1,7 +1,8 @@
 package IteratorExample;
 
 
-import java.util.ArrayList;
+import java.util.*;
+import java.util.Iterator;
 
 public class PancakeHouseMenu {
 
@@ -28,7 +29,7 @@ public class PancakeHouseMenu {
 //        return menuItems;
 //    }
     public Iterator createIterator(){
-        return new PancakeHouseIterator(menuItems);
+        return menuItems.iterator();
     }
 
     public String toString(){
