@@ -1,25 +1,22 @@
 package IteratorExample;
 
+import java.util.Iterator;
+import java.util.ArrayList;
 
-public class MenuItem extends MenuComponent{
-    private double price;
-    private String name;
-    private String description;
-    private boolean isVegeterian;
+public class MenuItem extends MenuComponent {
+    String name;
+    String description;
+    boolean vegetarian;
+    double price;
 
-    public MenuItem(double price, String name, String description, boolean isVegetarian) {
-        this.price = price;
+    public MenuItem(String name,
+                    String description,
+                    boolean vegetarian,
+                    double price)
+    {
         this.name = name;
         this.description = description;
-        this.isVegeterian = isVegetarian;
-    }
-
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
+        this.vegetarian = vegetarian;
         this.price = price;
     }
 
@@ -27,33 +24,24 @@ public class MenuItem extends MenuComponent{
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public double getPrice() {
+        return price;
     }
 
-    public boolean getVegeterian() {
-        return isVegeterian;
+    public boolean isVegetarian() {
+        return vegetarian;
     }
 
-    public void setVegeterian(boolean vegeterian) {
-        isVegeterian = vegeterian;
-    }
-
-    @Override
     public void print() {
-        System.out.print(" "+ getName());
-        if(isVegetarian()){
+        System.out.print("  " + getName());
+        if (isVegetarian()) {
             System.out.print("(v)");
         }
-        System.out.println(", "+ getPrice());
-        System.out.println("      -- " + getDescription());
+        System.out.println(", " + getPrice());
+        System.out.println("     -- " + getDescription());
     }
 }

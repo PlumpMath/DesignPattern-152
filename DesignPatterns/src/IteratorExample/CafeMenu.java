@@ -3,7 +3,7 @@ package IteratorExample;
 import java.util.*;
 import java.util.Iterator;
 
-public class CafeMenu implements Menu{
+public class CafeMenu extends Menu{
     Hashtable menuItems = new Hashtable();
 
     public CafeMenu(){
@@ -29,9 +29,9 @@ public class CafeMenu implements Menu{
 //        return menuItems;
 //    }
 
-    @Override
-    public Iterator createIterator() {
-
-        return menuItems.values().iterator();
-    }
+//    @Override
+//    public Iterator createIterator() {
+//
+//        return menuItems.values().iterator();
+//    }
 }

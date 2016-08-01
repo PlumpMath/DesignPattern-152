@@ -5,35 +5,45 @@ import java.util.Iterator;
 
 
 public class Waitress {
-    Menu pancakeHouseMenu;
-    Menu dinnerMenu;
-    Menu cafeMenu;
 
+    MenuComponent allMenus;
 
-    public Waitress(Menu pancakeHouseMenu, Menu dinnerMenu, Menu cafeMenu) {
-        this.pancakeHouseMenu = pancakeHouseMenu;
-        this.dinnerMenu = dinnerMenu;
-        this.cafeMenu = cafeMenu;
+    public Waitress(MenuComponent allMenus){
+        this.allMenus = allMenus;
     }
 
     public void printMenu(){
-        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-        Iterator dinnerIterator = dinnerMenu.createIterator();
-        Iterator cafeIterator = cafeMenu.createIterator();
-        System.out.println("MENU\n--------\nBREAKFAST");
-        printMenu(pancakeIterator);
-        System.out.println("\nLUNCH");
-        printMenu(dinnerIterator);
-        System.out.println("\nDINNER");
-        printMenu(cafeIterator);
+        allMenus.print();
     }
 
-    private void printMenu(Iterator iterator){
-        while(iterator.hasNext()) {
-            MenuItem menuItem = (MenuItem) iterator.next();
-            System.out.print(menuItem.getName() + ", ");
-            System.out.print(menuItem.getPrice() + " -- ");
-            System.out.println(menuItem.getDescription());
-        }
-    }
+//    public Waitress(Menu pancakeHouseMenu, Menu dinnerMenu, Menu cafeMenu) {
+//        this.pancakeHouseMenu = pancakeHouseMenu;
+//        this.dinnerMenu = dinnerMenu;
+//        this.cafeMenu = cafeMenu;
+//    }
+
+    //    Menu pancakeHouseMenu;
+//    Menu dinnerMenu;
+//    Menu cafeMenu;
+
+//    public void printMenu(){
+//        Iterator pancakeIterator = pancakeHouseMenu.createIterator();
+//        Iterator dinnerIterator = dinnerMenu.createIterator();
+//        Iterator cafeIterator = cafeMenu.createIterator();
+//        System.out.println("MENU\n--------\nBREAKFAST");
+//        printMenu(pancakeIterator);
+//        System.out.println("\nLUNCH");
+//        printMenu(dinnerIterator);
+//        System.out.println("\nDINNER");
+//        printMenu(cafeIterator);
+//    }
+
+//    private void printMenu(Iterator iterator){
+//        while(iterator.hasNext()) {
+//            MenuItem menuItem = (MenuItem) iterator.next();
+//            System.out.print(menuItem.getName() + ", ");
+//            System.out.print(menuItem.getPrice() + " -- ");
+//            System.out.println(menuItem.getDescription());
+//        }
+//    }
 }
