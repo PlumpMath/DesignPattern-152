@@ -1,17 +1,17 @@
 package IteratorExample;
 
 
-public class MenuItem {
+public class MenuItem extends MenuComponent{
     private double price;
     private String name;
     private String description;
     private boolean isVegeterian;
 
-    public MenuItem(double price, String name, String description, boolean isVegeterian) {
+    public MenuItem(double price, String name, String description, boolean isVegetarian) {
         this.price = price;
         this.name = name;
         this.description = description;
-        this.isVegeterian = isVegeterian;
+        this.isVegeterian = isVegetarian;
     }
 
 
@@ -39,11 +39,21 @@ public class MenuItem {
         this.description = description;
     }
 
-    public boolean isVegeterian() {
+    public boolean getVegeterian() {
         return isVegeterian;
     }
 
     public void setVegeterian(boolean vegeterian) {
         isVegeterian = vegeterian;
+    }
+
+    @Override
+    public void print() {
+        System.out.print(" "+ getName());
+        if(isVegetarian()){
+            System.out.print("(v)");
+        }
+        System.out.println(", "+ getPrice());
+        System.out.println("      -- " + getDescription());
     }
 }
