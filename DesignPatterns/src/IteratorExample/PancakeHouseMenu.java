@@ -4,7 +4,7 @@ package IteratorExample;
 import java.util.*;
 import java.util.Iterator;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu{
 
 
     ArrayList menuItems;
