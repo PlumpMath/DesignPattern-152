@@ -1,7 +1,9 @@
 package IteratorExample;
 
+import java.util.Iterator;
 
 public class DinnerMenuIterator implements Iterator {
+
     MenuItem[] items;
     int position = 0;
 
@@ -23,5 +25,17 @@ public class DinnerMenuIterator implements Iterator {
         MenuItem menuItem =  items[position];
         position++;
         return menuItem;
+    }
+
+    public void remove(){
+        if(position <= 0){
+            throw new IllegalStateException("you cant remove an item until you've done at least one next()");
+        }
+        if(items[position-1] != null){
+            for (int i = position-1; i < items.length - 1; i++) {
+                items[i] = items[i+1];
+            }
+            items[items.length-1] = null;
+        }
     }
 }
