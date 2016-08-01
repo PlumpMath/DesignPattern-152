@@ -1,8 +1,6 @@
-package CommandeExample;
+package CommandExample;
 
-/**
- * Created by Тимур on 26.07.2016.
- */
+
 public class CeilingFan {
 
     public static final int HIGH = 3;
@@ -38,4 +36,5 @@ public class CeilingFan {
     public int getSpeed() {
         return speed;
     }
+
 }

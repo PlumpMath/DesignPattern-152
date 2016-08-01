@@ -1,4 +1,4 @@
-package CommandeExample;
+package CommandExample;
 
 public class CeilingFanOffCommand implements Command {
     CeilingFan ceilingFan;

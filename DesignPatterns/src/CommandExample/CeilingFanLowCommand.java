@@ -1,16 +1,16 @@
-package CommandeExample;
+package CommandExample;
 
-public class CeilingFanMediumCommand implements Command {
+public class CeilingFanLowCommand implements Command {
     CeilingFan ceilingFan;
     int prevSpeed;
 
-    public CeilingFanMediumCommand(CeilingFan ceilingFan) {
+    public CeilingFanLowCommand(CeilingFan ceilingFan) {
         this.ceilingFan = ceilingFan;
     }
 
     public void execute() {
         prevSpeed = ceilingFan.getSpeed();
-        ceilingFan.medium();
+        ceilingFan.low();
     }
 
     public void undo() {

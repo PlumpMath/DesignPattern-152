@@ -1,18 +1,18 @@
-package CommandeExample;
+package CommandExample;
 
+public class LightOnCommand implements Command {
 
-public class LightOffCommand implements Command {
     Light light;
     int level;
 
-    public LightOffCommand(Light light) {
+    public LightOnCommand(Light light) {
         this.light = light;
     }
 
     @Override
     public void execute() {
         level = light.getLevel();
-        light.off();
+        light.on();
     }
 
     @Override

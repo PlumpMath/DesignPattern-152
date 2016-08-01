@@ -1,4 +1,4 @@
-package CommandeExample;
+package CommandExample;
 
 /**
  *

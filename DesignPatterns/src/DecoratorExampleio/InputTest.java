@@ -1,4 +1,4 @@
-package DecoratorExample.io;
+package DecoratorExampleio;
 
 import java.io.BufferedInputStream;
 import java.io.FileInputStream;
@@ -9,7 +9,7 @@ public class InputTest {
 
     public static void main(String[] args) throws IOException{
         int c;
-        try(InputStream in = new LowerCaseInputStream(new BufferedInputStream(new FileInputStream("E:\\HomeWorks\\HomeWork\\DesignPatterns\\src\\DecoratorExample\\io\\test")))){
+        try(InputStream in = new LowerCaseInputStream(new BufferedInputStream(new FileInputStream("C:\\Users\\Тимур\\IdeaProjects\\DesignPattern\\DesignPatterns\\src\\DecoratorExampleio\\test")))){
             while ((c= in.read()) >= 0){
                 System.out.print((char) c);
             }

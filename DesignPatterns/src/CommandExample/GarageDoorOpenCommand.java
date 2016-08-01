@@ -1,4 +1,4 @@
-package CommandeExample;
+package CommandExample;
 
 /**
  * Created by Тимур on 26.07.2016.
@@ -18,6 +18,6 @@ public class GarageDoorOpenCommand implements Command {
 
     @Override
     public void undo() {
-        
+
     }
 }

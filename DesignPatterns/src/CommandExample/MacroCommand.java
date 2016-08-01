@@ -1,4 +1,4 @@
-package CommandeExample;
+package CommandExample;
 
 public class MacroCommand implements Command{
    Command[] commands;

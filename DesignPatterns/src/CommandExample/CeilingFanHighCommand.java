@@ -1,18 +1,24 @@
-package CommandeExample;
+package CommandExample;
 
-public class CeilingFanLowCommand implements Command {
+/**
+ * Created by Тимур on 26.07.2016.
+ */
+public class CeilingFanHighCommand implements Command {
+
     CeilingFan ceilingFan;
     int prevSpeed;
 
-    public CeilingFanLowCommand(CeilingFan ceilingFan) {
+    public CeilingFanHighCommand(CeilingFan ceilingFan){
         this.ceilingFan = ceilingFan;
     }
 
+    @Override
     public void execute() {
         prevSpeed = ceilingFan.getSpeed();
-        ceilingFan.low();
+        ceilingFan.high();
     }
 
+    @Override
     public void undo() {
         if (prevSpeed == CeilingFan.HIGH) {
             ceilingFan.high();

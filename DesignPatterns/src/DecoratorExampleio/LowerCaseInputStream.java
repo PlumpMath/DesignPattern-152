@@ -1,4 +1,4 @@
-package DecoratorExample.io;
+package DecoratorExampleio;
 
 import java.io.FilterInputStream;
 import java.io.IOException;
