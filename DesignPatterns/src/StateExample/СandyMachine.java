@@ -93,7 +93,32 @@ public class СandyMachine extends State{
         }
     }
 
+    public void refill(int numGumBalls) {
+        this.countOfGum = numGumBalls;
+        state = NO_QUARTER;
+    }
 
+    public String toString() {
+        StringBuffer result = new StringBuffer();
+        result.append("\nMighty Gumball, Inc.");
+        result.append("\nJava-enabled Standing Gumball Model #2004\n");
+        result.append("Inventory: " + countOfGum + " gumball");
+        if (countOfGum != 1) {
+            result.append("s");
+        }
+        result.append("\nMachine is ");
+        if (state == SOLD_OUT) {
+            result.append("sold out");
+        } else if (state == NO_QUARTER) {
+            result.append("waiting for quarter");
+        } else if (state == HAS_QUARTER) {
+            result.append("waiting for turn of crank");
+        } else if (state == SOLD) {
+            result.append("delivering a gumball");
+        }
+        result.append("\n");
+        return result.toString();
+    }
 
 
 }
