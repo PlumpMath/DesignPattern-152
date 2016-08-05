@@ -13,12 +13,24 @@ public class СandyMachine extends State{
 
     // а эта переменная для хранения текущего состояния
     int state = SOLD_OUT;
+    int countOfGum = 0;
 
+    public СandyMachine(int countOfGum) {
+        this.countOfGum = countOfGum;
+        if(countOfGum > 0){
+            state = NO_QUARTER;
+        }
+    }
 
     public void insertQuarter(){
         if(state == HAS_QUARTER){
 
             System.out.println("You can't insert another quarter");
+
+        } else if(state == NO_QUARTER){
+
+            state = HAS_QUARTER;
+            System.out.println("You inserted a quarter");
 
         } else if(state == SOLD_OUT){
 
@@ -28,13 +40,7 @@ public class СandyMachine extends State{
 
             System.out.println("Please wait, we're already giving you a gumball");
 
-        } else if(state == NO_QUARTER){
-
-            state = HAS_QUARTER;
-            System.out.println("You inserted a quarter");
-
         }
-
 
     }
 }
