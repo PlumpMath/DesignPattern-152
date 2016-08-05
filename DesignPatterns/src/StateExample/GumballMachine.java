@@ -1,7 +1,6 @@
 package StateExample;
 
-
-public class СandyMachine extends State{
+public class GumballMachine {
 
 
     // Каждое состояние представлено целым числом
@@ -15,7 +14,7 @@ public class СandyMachine extends State{
     int state = SOLD_OUT;
     int countOfGum = 0;
 
-    public СandyMachine(int countOfGum) {
+    public GumballMachine(int countOfGum) {
         this.countOfGum = countOfGum;
         if(countOfGum > 0){
             state = NO_QUARTER;
