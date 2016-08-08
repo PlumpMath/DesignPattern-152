@@ -25,4 +25,9 @@ public class CallDuck implements Quackable {
     public void notifyObservers() {
         observable.notifyObservers();
     }
+
+    @Override
+    public String toString() {
+        return "CallDuck";
+    }
 }
