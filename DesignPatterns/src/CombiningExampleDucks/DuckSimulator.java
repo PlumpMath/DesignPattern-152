@@ -4,15 +4,18 @@ package CombiningExampleDucks;
 public class DuckSimulator {
     public static void main(String[] args) {
         DuckSimulator duckSimulator = new DuckSimulator();
-        duckSimulator.simulate();
+        AbstractDuckFactory duckFactory = new CountingDuckFactory();
+
+
+        duckSimulator.simulate(duckFactory);
 
     }
 
-    private void simulate() {
-        Quackable mallardDuck = new QuackCounter(new MallardDuck());
-        Quackable redheadDuck = new QuackCounter(new RedheadDuck());
-        Quackable callDuck = new QuackCounter(new CallDuck());
-        Quackable rubberDuck = new QuackCounter(new RubberDuck());
+    private void simulate(AbstractDuckFactory duckFactory) {
+        Quackable mallardDuck = duckFactory.createMallardDuck();
+        Quackable redheadDuck = duckFactory.createRedheadDuck();
+        Quackable callDuck = duckFactory.createCallDuck();
+        Quackable rubberDuck = duckFactory.createRubberDuck();
         Quackable goose = new QuackCounter(new GooseAdapter(new Goose()));
 
         System.out.println("\nDuck Simulator");
