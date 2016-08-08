@@ -1,7 +1,7 @@
 package CombiningExampleDucks;
 
 
-public interface Quackable {
+public interface Quackable extends QuackObservable {
     String quackQuack = "QUACK";
     String squeakSqueak = "SQUEAK";
     String kwakKwak = "KWAK";
