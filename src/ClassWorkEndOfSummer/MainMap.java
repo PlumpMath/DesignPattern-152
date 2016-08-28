@@ -4,28 +4,35 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-class SoccerTeam {  
-    // ���� players. ���� - ����� � ������. �������� - ������� ������.    
-	HashMap<String, List<String>> players;   
-    public SoccerTeam() {         players = new HashMap<String, List<String>> ();     }  
-    public List<String> get(String position) {  
-    	 List<String> names=new ArrayList<>();
-    	for (int i = 0; i < players.get(position).size(); i++) {
+class SoccerTeam {
+
+    HashMap<String, List<String>> players;
+
+    public SoccerTeam() {
+        players = new HashMap<String, List<String>> ();
+    }
+
+    public List<String> get(String position) {
+        List <String> names = new ArrayList<>();
+    	for ( int i = 0; i < players.get(position).size(); i++) {
 			names.add(players.get(position).get(i));
 		}
-    	      
-    	return names;     }  
+    	return names;
+    }
     public void put(String position, String name) {
-    	 if(players.get(position) == null)
-    		 players.put(position,new ArrayList<String>());
+    	 if(players.get(position) == null) {
+             players.put(position, new ArrayList<String>());
+         }
     	 players.get(position).add(name);
     }
-    }
+}
+
+
 public class MainMap {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-     SoccerTeam sokol=new SoccerTeam();
+
+     SoccerTeam sokol = new SoccerTeam();
      sokol.put("1", "Vasya");
      sokol.put("2", "Petya");
      sokol.put("1", "Dima");
