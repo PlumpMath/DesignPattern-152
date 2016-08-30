@@ -23,6 +23,12 @@ public class TestArrayList extends AbstractTestList{
         testArrList.set(index, value);
     }
 
+    @Override
+    boolean addTestValue(String value) {
+        testArrList.add(value);
+        return true;
+    }
+
 
     @Override
     public String toString() {

@@ -20,6 +20,13 @@ public class TestLinkedList extends AbstractTestList {
     }
 
     @Override
+    boolean addTestValue(String value) {
+
+        testLinList.add(value);
+        return true;
+    }
+
+    @Override
     public String toString() {
         return "LinkedList";
     }
