@@ -41,6 +41,24 @@ public class TestArrayList extends AbstractTestList{
         return true;
     }
 
+    @Override
+    boolean removeTestObject(String string) {
+        testArrList.remove(string);
+        return true;
+    }
+
+    @Override
+    boolean addOnZeroElem(String value) {
+        testArrList.add(0,value);
+        return true;
+    }
+
+    @Override
+    boolean addOnEndElem(String string) {
+        testArrList.add(numberOfElements-1,string);
+        return true;
+    }
+
 
     @Override
     public String toString() {

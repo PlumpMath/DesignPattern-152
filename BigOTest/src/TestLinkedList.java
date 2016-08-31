@@ -39,6 +39,24 @@ public class TestLinkedList extends AbstractTestList {
     }
 
     @Override
+    boolean removeTestObject(String string) {
+        testLinList.remove(string);
+        return true;
+    }
+
+    @Override
+    boolean addOnZeroElem(String string) {
+        testLinList.add(0,string);
+        return true;
+    }
+
+    @Override
+    boolean addOnEndElem(String string) {
+        testLinList.add(numberOfElements-1,string);
+        return true;
+    }
+
+    @Override
     public String toString() {
         return "LinkedList";
     }
