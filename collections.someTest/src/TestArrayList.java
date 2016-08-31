@@ -29,6 +29,18 @@ public class TestArrayList extends AbstractTestList{
         return true;
     }
 
+    @Override
+    boolean addIndexTestValue(int index, String value) {
+        testArrList.add(index,value);
+        return true;
+    }
+
+    @Override
+    boolean removeTestValue(int index) {
+        testArrList.remove(index);
+        return true;
+    }
+
 
     @Override
     public String toString() {

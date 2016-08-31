@@ -18,18 +18,42 @@ public class TestClass {
         System.out.println("Time diff a/l : "+ arrayListTime/linkedListTime + " times");
         System.out.println("--------------------------------");
         System.out.println("--------------------------------");
+
+
         arrayListTime = setTest(testArr);
         linkedListTime = setTest(testLin);
         System.out.println("Time diff a/l : "+ arrayListTime/linkedListTime + " times");
         System.out.println("--------------------------------");
         System.out.println("--------------------------------");
+
+
         arrayListTime = addTest(testArr);
         linkedListTime = addTest(testLin);
         System.out.println("Time diff a/l : "+ arrayListTime/linkedListTime + " times");
         System.out.println("--------------------------------");
         System.out.println("--------------------------------");
 
+
+        arrayListTime = removeIndexTest(testArr);
+        linkedListTime = removeIndexTest(testLin);
+        System.out.println("Time diff a/l : "+ arrayListTime/linkedListTime + " times");
+        System.out.println("--------------------------------");
+        System.out.println("--------------------------------");
+
+
+        arrayListTime = addIndexTest(testArr);
+        linkedListTime = addIndexTest(testLin);
+        System.out.println("Time diff a/l : "+ arrayListTime/linkedListTime + " times");
+        System.out.println("--------------------------------");
+        System.out.println("--------------------------------");
+
+
+
+
+
     }
+
+
 
     public static long getTest(AbstractTestList list){
         int elemIndex = LIST_LENGTH / 2;
@@ -42,7 +66,7 @@ public class TestClass {
         long endTime = System.currentTimeMillis();
 
         long time = endTime - startTime;
-        System.out.println("\"get\" test for "+list.toString()+" Time : " + time +" ms");
+        System.out.println("\"get(index)\" test for "+list.toString()+" Time : " + time +" ms");
 
         return time;
 
@@ -62,7 +86,7 @@ public class TestClass {
 
 
         long time = endTime - startTime;
-        System.out.println("\"set\" test for "+list.toString()+" Time : " + time +" ms");
+        System.out.println("\"set(index,value)\" test for "+list.toString()+" Time : " + time +" ms");
 
         return time;
     }
@@ -79,10 +103,47 @@ public class TestClass {
 
 
         long time = endTime - startTime;
-        System.out.println("\"add\" test for "+list.toString()+" Time : " + time +" ms");
+        System.out.println("\"add()\" test for " + list.toString() + " Time : " + time +" ms");
 
         return time;
 
+
+    }
+
+    public static long addIndexTest(AbstractTestList list) {
+
+        long startTime = System.currentTimeMillis();
+
+        for (int k = 0; k < OPERATION_COUNT ; k++ ) {
+            list.addIndexTestValue(k,"A");
+        }
+
+        long endTime = System.currentTimeMillis();
+
+
+        long time = endTime - startTime;
+        System.out.println("\"add(index,value)\" test for " + list.toString() + " Time : " + time +" ms");
+
+        return time;
+
+
+    }
+
+    public static long removeIndexTest(AbstractTestList list){
+
+        long startTime = System.currentTimeMillis();
+
+        for (int k = 0; k < OPERATION_COUNT ; k++ ) {
+            list.removeTestValue(k);
+        }
+
+        long endTime = System.currentTimeMillis();
+
+
+        long time = endTime - startTime;
+        System.out.println("\"remove(index)\" test for " + list.toString() + " Time : " + time +" ms");
+
+        return time;
 
     }
 }

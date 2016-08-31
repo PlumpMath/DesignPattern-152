@@ -27,6 +27,18 @@ public class TestLinkedList extends AbstractTestList {
     }
 
     @Override
+    boolean addIndexTestValue(int index, String value) {
+        testLinList.add(index,value);
+        return true;
+    }
+
+    @Override
+    boolean removeTestValue(int index) {
+        testLinList.remove(index);
+        return true;
+    }
+
+    @Override
     public String toString() {
         return "LinkedList";
     }
